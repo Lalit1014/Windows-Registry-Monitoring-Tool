@@ -179,8 +179,4 @@ This project covers:
 
 ---
 
-## 👨‍💻 Author
-# Lalit Keer
-
-Unified Mentor Internship — Cybersecurity / Blue Team Track  
-Project Duration: 15 Days
+## 👨‍💻 Author :- Lalit Keer
