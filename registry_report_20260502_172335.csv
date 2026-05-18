@@ -1,0 +1,6 @@
+timestamp,change_type,severity,key_label,key_path,value_name,old_value,new_value,malware_flag,suspicious_path
+2026-05-02T17:23:33.679328,ADDED,HIGH,AUTORUN_HKCU_RUN,Software\Microsoft\Windows\CurrentVersion\Run,MalwareLoader,,C:\Users\User\AppData\Roaming\malware.exe,,True
+2026-05-02T17:23:33.679431,MODIFIED,CRITICAL,DEFENDER_DISABLE,SOFTWARE\Policies\Microsoft\Windows Defender,DisableAntiSpyware,0,1,Disables Windows Defender AntiSpyware,False
+2026-05-02T17:23:33.679453,MODIFIED,CRITICAL,WINLOGON,SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon,Shell,explorer.exe,"explorer.exe,C:\malware\backdoor.exe",Shell Value Changed in Winlogon (possible backdoor),True
+2026-05-02T17:23:33.679456,MODIFIED,CRITICAL,FIREWALL_PROFILES,SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile,EnableFirewall,1,0,Firewall setting changed,False
+2026-05-02T17:23:33.679458,ADDED,HIGH,AUTORUN_HKLM_RUN,Software\Microsoft\Windows\CurrentVersion\Run,Updater,,C:\Windows\Temp\svchost32.exe /hidden,,True

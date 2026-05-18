@@ -1,0 +1,84 @@
+======================================================================
+  WINDOWS REGISTRY CHANGE MONITORING SYSTEM — ANALYSIS REPORT
+======================================================================
+  Generated  : 2026-05-02 17:23:35
+  Total Changes : 5
+  Critical    : 3
+  High        : 2
+  Malware Patterns Matched : 3
+======================================================================
+
+⚠️  MALWARE / SUSPICIOUS BEHAVIOR DETECTIONS
+----------------------------------------------------------------------
+  [CRITICAL] MODIFIED | SOFTWARE\Policies\Microsoft\Windows Defender | DisableAntiSpyware
+         Pattern : Disables Windows Defender AntiSpyware
+         New Val : 1
+         Time    : 2026-05-02T17:23:33.679431
+
+  [CRITICAL] MODIFIED | SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon | Shell
+         Pattern : Shell Value Changed in Winlogon (possible backdoor)
+         New Val : explorer.exe,C:\malware\backdoor.exe
+         Time    : 2026-05-02T17:23:33.679453
+
+  [CRITICAL] MODIFIED | SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile | EnableFirewall
+         Pattern : Firewall setting changed
+         New Val : 0
+         Time    : 2026-05-02T17:23:33.679456
+
+
+🔴 CRITICAL SEVERITY CHANGES
+----------------------------------------------------------------------
+  MODIFIED | SOFTWARE\Policies\Microsoft\Windows Defender \ DisableAntiSpyware
+    Old : 0
+    New : 1
+    At  : 2026-05-02T17:23:33.679431
+
+  MODIFIED | SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon \ Shell
+    Old : explorer.exe
+    New : explorer.exe,C:\malware\backdoor.exe
+    At  : 2026-05-02T17:23:33.679453
+
+  MODIFIED | SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile \ EnableFirewall
+    Old : 1
+    New : 0
+    At  : 2026-05-02T17:23:33.679456
+
+
+📋 ALL CHANGES (Chronological)
+----------------------------------------------------------------------
+  🟠 [HIGH    ] ➕ ADDED    | MalwareLoader
+    Path    : Software\Microsoft\Windows\CurrentVersion\Run
+    Old Val : None
+    New Val : C:\Users\User\AppData\Roaming\malware.exe
+    Time    : 2026-05-02T17:23:33.679328
+
+  🔴 [CRITICAL] ✏️  MODIFIED | DisableAntiSpyware
+    Path    : SOFTWARE\Policies\Microsoft\Windows Defender
+    Old Val : 0
+    New Val : 1
+    Time    : 2026-05-02T17:23:33.679431
+    ⚠️  MALWARE : Disables Windows Defender AntiSpyware
+
+  🔴 [CRITICAL] ✏️  MODIFIED | Shell
+    Path    : SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+    Old Val : explorer.exe
+    New Val : explorer.exe,C:\malware\backdoor.exe
+    Time    : 2026-05-02T17:23:33.679453
+    ⚠️  MALWARE : Shell Value Changed in Winlogon (possible backdoor)
+
+  🔴 [CRITICAL] ✏️  MODIFIED | EnableFirewall
+    Path    : SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\StandardProfile
+    Old Val : 1
+    New Val : 0
+    Time    : 2026-05-02T17:23:33.679456
+    ⚠️  MALWARE : Firewall setting changed
+
+  🟠 [HIGH    ] ➕ ADDED    | Updater
+    Path    : Software\Microsoft\Windows\CurrentVersion\Run
+    Old Val : None
+    New Val : C:\Windows\Temp\svchost32.exe /hidden
+    Time    : 2026-05-02T17:23:33.679458
+
+======================================================================
+  END OF REPORT
+======================================================================
